@@ -2,7 +2,7 @@
 
 use App\Models\Comics;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ComicsController as ComicsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+
+Route::resource('comic', ComicsController::class);
 
