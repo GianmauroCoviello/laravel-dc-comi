@@ -35,7 +35,10 @@
                         @endforeach
                     </tbody>
                 </table>
-                <a href="{{route('comics.create')}}">aggiungi un altro fumetto</a>
+                <button class="btn btn-primary mt-4">
+                    <a href="{{route('comics.create')}}">aggiungi un altro fumetto</a>
+                </button>
+                
             </div>
         </div>
     </div>
