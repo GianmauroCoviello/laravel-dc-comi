@@ -12,12 +12,25 @@
                         <th>Serie</th>
                         <th>Prezzo</th>
                         <th>Azioni</th>
+                        
                     </thead>
                     <tbody>
                         @foreach ($comics as $item)
                             <tr>
                                 <td>{{$item->id}}</td>
+                                <td>{{$item->title}}</td>
+                                <td>{{$item->series}}</td>
+                                <td>{{$item->price}}</td>
+                                <td>
+                                    <button class="btn btn-primary">
+                                         <a href="{{route('comics.show', $item->id)}}">seleziona</a>
+                                    </button>
+                                   
+                                </td>
+                              
                             </tr>
+
+
                             
                         @endforeach
                     </tbody>

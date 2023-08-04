@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::resource('comic', ComicsController::class);
+Route::resource('comics', ComicsController::class);
 

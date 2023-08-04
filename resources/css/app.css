@@ -1,0 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.description-comic{
+    margin: 20px;
+}

@@ -7,7 +7,7 @@
             <div class="col-6">
                 <h1>DC COMICS</h1>
                 <button class="btn btn-primary">
-                    <a href="{{route('comic.index')}}"> Visualizza tutti i fumetti</a> 
+                    <a href="{{route('comics.index')}}"> Visualizza tutti i fumetti</a> 
                 </button>
         
             </div>
