@@ -37,29 +37,25 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-
         $form_data = $request->all();
 
-        $comics = new Comics();
+        $comic = new Comics();
+        $comic->title = $form_data['title'];
+        $comic->description = $form_data['description'];
+        $comic->thumb = $form_data['thumb'];
+        $comic->cover_image = $form_data['cover_image'];
+        $comic->thumb2 = $form_data['thumb2'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->sale_date = $form_data['sale_date'];
+        $comic->type = $form_data['type'];
+        $comic->artists = $form_data['artists'];
+        $comic->writers = $form_data['writers'];
 
-        $comics->title = $form_data['title'];
-        $comics->thumb = $form_data['thumb'];
-        $comics->cover_image = $form_data['cover_image'];
-        $comics->thumb2 = $form_data['thumb2'];
-        $comics->price = $form_data['price'];
-        $comics->series = $form_data['series'];
-        $comics->sale_date = $form_data['sale_date'];
-        $comics->type = $form_data['type'];
-        $comics->artists = $form_data['artists'];
-        $comics->writers = $form_data['writers'];
-        
-       
-        $comics->save();
+        $comic->save();
 
-
-        return redirect()->route('comic.index');
-        
-
+        return redirect()->route('comics.show');
+    
     }
 
     /**
