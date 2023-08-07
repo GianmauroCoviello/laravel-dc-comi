@@ -15,18 +15,21 @@
                         
                     </thead>
                     <tbody>
-                        @foreach ($comics as $item)
+                        @foreach ($comics as $comic)
                             <tr>
-                                <td>{{$item->id}}</td>
-                                <td>{{$item->title}}</td>
-                                <td>{{$item->series}}</td>
-                                <td>{{$item->price}}</td>
+                                <td>{{$comic->id}}</td>
+                                <td>{{$comic->title}}</td>
+                                <td>{{$comic->series}}</td>
+                                <td>{{$comic->price}}</td>
                                 <td>
                                     <button class="btn btn-primary">
-                                         <a href="{{route('comics.show', $item->id)}}">seleziona</a>
+                                         <a href="{{route('comics.show', $comic->id)}}">seleziona</a>
                                     </button>
-                                   
+                                    <button class="btn btn-primary mt-4">
+                                        <a href="{{route('comics.edit' , $comic->id)}}">modifica</a>
+                                    </button>
                                 </td>
+                                
                               
                             </tr>
 
